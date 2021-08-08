@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+}
+
+#logo {
+    padding: 25px 0;
+    width: 160px;
+}
+
+input {
+    background-color: black;
+    border-radius: 12px;
+    border: 2px solid white;
+    outline: none;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+        0 15px 40px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+input:hover {
+    border: 2px solid gray;
+}
+
+input::placeholder {
+    color: #bbb;
+}
+
+.card {
+    background-color: black;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    padding: 3rem;
+    max-width: 800px;
+    margin-bottom: 6%;
+    user-select: none;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 10px grey;
+}
+
+.avatar {
+    border: 5px solid white;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+}
+
+.avatar:hover {
+    border: none;
+}
+
+.user-info {
+    color: #eee;
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info p {
+    padding-top: 5px;
+}
+
+.user-info ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.9rem;
+    margin-left: 0.5rem;
+}
+
+.repo {
+    background-color: #2a2a72;
+    border-radius: 5px;
+    display: inline-block;
+    color: white;
+    font-size: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+#repos {
+    margin-top: 12px;           
+}
+
+#Btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1;
+    font-size: 50px;
+    cursor: pointer;  
+    color: green; 
+}
+
+#Btn:hover {
+   color: #b3f38d;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto;
+    background-color: #14173b;
+}
+
+.footerdetails {
+    letter-spacing: 2px;
+    color: white;
+    font-size: 14px;
+    margin: 18px;
+}
+
+@media screen and (max-width: 768px) {
+    #logo {
+        width: 100px;
+        padding: 40px 0;
+    }
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 4rem;
+        max-width: initial;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-bottom: 10%;
+        border-radius: 20px 0 20px 0;
+        animation: animate 2s infinite;
+    }
+    .card:hover {
+        box-shadow: 5px 5px 10px grey;
+    }
+    @keyframes animate {
+        50% {
+            border-radius: 2px 20px; 
+        }
+    }
+    .avatar {
+        border: 5px solid rgb(97, 104, 201);
+        height: 165px;
+        width: 165px;
+    }
+    .avatar:hover {
+        border: none;
+    }
+    .user-info {
+        text-align: center;
+        margin-left: 1rem;
+    }
+    .user-info h2 {
+        font-size: 18px;
+    }
+    .user-info p {
+        font-size: 14px;
+        padding-top: 5px;
+    }
+    .user-info ul {
+        padding-top: 10px;
+        justify-content: space-between;
+    }
+    .user-info ul li strong {
+        font-size: 0.9rem;
+    }
+    #repos {
+        margin: 5% 0;
+        padding: 5px 5px;            
+    }
+    #Btn {
+        font-size: 40px;
+        right: 15px;
+        bottom: 15px;
+    }
+    .footerdetails {
+        font-size: 11px;
+    }
+}
